@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <style>
+        nav{background : orange;
+        color: white;
+        justify-content: center;
+        display: flex;
+        gap : 100px;
+        padding: 20px;
+        margin-top: 20px;
+        }
+        nav a{
+            background-color: darkorange;
+            border-radius: 5px;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        footer{background: rgb(0, 116, 0);
+        color: white;
+        justify-content: center;
+        display: flex;
+        padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+            <a href="/"><span>Home</span></a>
+            <a href="/about"><span>About</span></a>
+            <a href="/contact"><span>Contact</span></a>  
+        </nav>
+        <div class="content">{% block content %} {% endblock%}</div>
+        <footer>
+            Phle Modiji aaye fir unhone Bihari banaye bihariyo ne bharamand banaya
+        </footer>
+    </div>
+</body>
+</html>

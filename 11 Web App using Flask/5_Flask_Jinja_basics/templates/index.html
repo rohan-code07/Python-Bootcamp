@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clas-X Sanskar Public School</title>
+</head>
+<body>
+    <ol>
+        {# This is Comment #}
+        {#<li>The marks of Pradeep is {{marks['Pradeep']}}</li>#}
+        {#<li>The marks of Rahul is {{marks['Rahul']}}</li>#}
+        {#<li>The marks of Rohit is {{marks['Rohit']}}</li>#}
+        {#<li>The marks of Raju is {{marks['Raju']}}</li>#}
+        {#<li>The marks of Chutki is {{marks['Chutki']}}</li>#}
+
+        {# This is for loop #}
+        {% for key in marks.keys() %}
+        <li>The marks of {{key}} is {{marks.get(key)}}</li>
+        {% if marks.get(key) > 80 %}
+            <span>Good</span>
+        {% endif %}
+        {% endfor %}
+    </ol>
+</body>
+</html>

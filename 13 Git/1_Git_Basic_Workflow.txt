@@ -1,0 +1,68 @@
+Git Workflow Basics — Short Notes
+
+
+What is Git?
+    Git is a version control system used to track changes in a project and maintain its history.
+
+Three Main Areas:
+
+    1. Working Directory
+        The actual project folder where you create and edit files.
+        Example: modifying main.cpp.
+
+    2. Staging Area
+        A temporary area where you select changes that should be included in the next commit.
+        Command:
+            git add filename          ######
+            To stage all changes:
+            git add .                 ######
+
+    3. Repository
+        Stores the commits (snapshots) of your project.
+        A commit records the changes that were staged.
+
+
+
+Basic Workflow:
+
+Edit Files
+    ↓
+git add
+    ↓
+Staging Area
+    ↓
+git commit
+    ↓
+Repository
+
+
+
+Important Commands:
+
+git init                                     # Initialize a Git repository
+git status                                   # Check current changes/status
+git add filename                             # Stage a specific file
+git add .                                    # Stage all changes
+git commit -m "message"                      # Save staged changes as a commit
+git log                                      # View commit history
+git clone <url>                              # copy a repository
+git config --list	                         # View Git configuration
+git config --global user.name "Name"	     # Set username
+git config --global user.email "Email"	     # Set email
+git clone <url>                              # copy a repository
+git diff	                                 # Show unstaged changes
+git diff --staged	                         # Show staged changes
+git restore [file]	                         # Discard working directory changes
+git restore --staged [file]	                 # Unstage files
+git reset --soft HEAD~1	                     # Undo last commit, keep changes staged
+git reset HEAD~1	                         # Undo last commit, keep changes unstaged
+git reset --hard HEAD~1                      # Undo last commit, discard changes
+git rm [file]	                             # Remove file from repository
+git rm --cached [file]	                     # Stop tracking file
+git mv [old] [new]	                         # Rename/move file
+
+Easy Way to Remember
+
+Working Directory → What I'm editing
+Staging Area → What I want to commit
+Repository → What I've committed
